@@ -1,0 +1,6 @@
+framework module Pods_CM_IOSWebAPIDemo {
+  umbrella header "Pods-CM_IOSWebAPIDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
