@@ -64,8 +64,8 @@ class Page2ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.dataArray[indexPath.row]
         cell.textLabel?.text = item.title
-        cell.detailTextLabel?.text = item.subtitle
-        cell.imageView?.af_setImage(withURLRequest: item.avatarImage! as! URLRequestConvertible)
+        cell.detailTextLabel?.text = item.youtubeImage!
+        cell.imageView?.af_setImage(withURL: URL(string: item.youtubeImage!)!)
          return cell
     }
 

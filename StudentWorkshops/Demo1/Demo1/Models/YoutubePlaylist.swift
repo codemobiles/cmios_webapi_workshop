@@ -25,7 +25,7 @@ struct Youtube: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, title, subtitle
-        case avatarImage
-        case youtubeImage
+        case avatarImage = "avatar_image"
+        case youtubeImage = "youtube_image"
     }
 }
