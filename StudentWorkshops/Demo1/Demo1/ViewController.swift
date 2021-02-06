@@ -13,8 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.testLink1()
-        self.testLink2()
-        self.notifyLine(message: "Hey", token:  "xxxxxx")
+//        self.testLink2()
+//        self.notifyLine(message: "Hey", token:  "UCY2sei3F7H6HAgC8vRtLmvfIWS0ElL5Cd1d0ldbuxv")
+        testLink3()
+    }
+    
+    
+    func testLink3()  {
+        AF.request("http://jsonplaceholder.typicode.com/posts", method: .get).responseString { (response) in
+            switch response.result {
+            case .success(let result):
+                print(result)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
     }
     
     
