@@ -19,9 +19,28 @@ class ViewController: UITableViewController {
 //        testLink4()
 //        testLink5()
 //        testLink6()
-        testLink7()
+//        testLink7()
+        self.login(username: "lek", password: "555")
     }
     
+    func login(username: String, password: String)  {
+        let data:[String:String] = ["username":username, "password":password]
+        AF.request("http://192.168.1.4:8080/login", method: .post, parameters: data).responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else {return}
+                do {
+                    let decoder = JSONDecoder()
+                }catch let error{
+                    print(error)
+                }
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
     
     func testLink7()  {
         AF.request("https://codemobiles.com/adhoc/youtubes/index_new.php?username=admin&password=password&type=foods", method: .get).responseJSON { (response) in
