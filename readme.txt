@@ -17,6 +17,7 @@ Workshop
 3. HTTP GET Method: AF.request("http://jsonplaceholder.typicode.com/posts", method: .get).responseString { (response) in
 4. HTTP POST Method: AF.request("http://jsonplaceholder.typicode.com/posts", method: .post, parameters: data).responseString { (response) in
 
+https://codemobiles.com/adhoc/youtubes/index_new.php?username=admin&password=password&type=foods
 
 
 HTTP Method
