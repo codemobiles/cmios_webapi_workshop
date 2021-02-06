@@ -25,7 +25,7 @@ class ViewController: UITableViewController {
     
     func login(username: String, password: String)  {
         let data:[String:String] = ["username":username, "password":password]
-        AF.request("http://192.168.1.4:8080/login", method: .post, parameters: data).responseJSON { (response) in
+        AF.request("http://192.168.1.4:8080/login", method: .post, parameters: data, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {
             case .success(_):
                 guard let data = response.data else {return}
