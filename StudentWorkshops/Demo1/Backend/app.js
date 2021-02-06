@@ -31,7 +31,7 @@ app.post("/uploads/", function (req, res) {
         await fs.remove(newpath)
       }
 
-      await fs.move(oldpath, newpath);
+      await fs.move(oldpath, newpath)
       res.json({ result: "ok", fields, files });
 
     });
