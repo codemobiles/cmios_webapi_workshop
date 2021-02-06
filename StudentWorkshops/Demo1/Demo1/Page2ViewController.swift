@@ -14,7 +14,7 @@ class Page2ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.loadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -63,6 +63,7 @@ class Page2ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.dataArray[indexPath.row]
         cell.textLabel?.text = item.title
+        cell.detailTextLabel?.text = item.subtitle
          return cell
     }
 
