@@ -1,5 +1,5 @@
 Course Outline
-1. Setp Xcode, VScode, RESTFul Client, NodeJS 14.x
+1. Setp Xcode, VScode, RESTFul Client, NodeJS 14.x        
 2. New Project with Cocoa
 3. Intro Http Network Programming
    - Http Protocol : [GET, POST, DELETE, PUT..]
