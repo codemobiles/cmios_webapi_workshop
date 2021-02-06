@@ -1,0 +1,3 @@
+npx nodemon app.js
+npm init -y
+npm i express body-parser formidable
