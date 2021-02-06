@@ -12,7 +12,10 @@ class Page3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.uploadFile(url: targetURL, data: <#T##Data#>, fileName: <#T##String#>)
+        let targetURL = "http://192.168.1.4:8080/uploads"
+        let image = UIImage(named: "test2")
+        let data = image?.jpegData(compressionQuality: 1.0)
+        self.uploadFile(url: targetURL, data: data!, fileName: "lek.jpg")
         // Do any additional setup after loading the view.
     }
     
