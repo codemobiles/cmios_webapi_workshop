@@ -52,7 +52,7 @@ class Page1ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.dataArray[indexPath.row]
         
-        cell.textLabel?.text = String(item.userID)
+        cell.textLabel?.text = String(item.userID!)
         cell.detailTextLabel?.text = item.title
         
          return cell
