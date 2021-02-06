@@ -2,8 +2,8 @@ import Foundation
 
 
 struct Product: Codable {
-    let body, title, userID: String?
-    let id: Int?
+    let body, title: String?
+    let id, userID: Int?
 
     enum CodingKeys: String, CodingKey {
         case body, title
