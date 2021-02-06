@@ -16,3 +16,11 @@ Workshop
 2. HTTP: AF.request("http://jsonplaceholder.typicode.com/posts").responseString { (response) in
 3. HTTP GET Method: AF.request("http://jsonplaceholder.typicode.com/posts", method: .get).responseString { (response) in
 4. HTTP POST Method: AF.request("http://jsonplaceholder.typicode.com/posts", method: .post, parameters: data).responseString { (response) in
+
+
+
+HTTP Method
+- GET : Query
+- POST : Insert
+- DELETE : Delete
+- PUT : Update
