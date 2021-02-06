@@ -22,14 +22,7 @@ class Page1ViewController: UITableViewController {
                 guard let data = response.data else {return}
                 do {
                     let decoder = JSONDecoder()
-                    let products =  try decoder.decode([Product].self, from: data)
-                    for product in products {
-                        print("\(Product.CodingKeys.id.stringValue) : \(product.id!)")
-                        print("\(Product.CodingKeys.userID.stringValue) : \(product.userID!)")
-                        print("\(Product.CodingKeys.title.stringValue) : \(product.title!)")
-                        print("\(Product.CodingKeys.body.stringValue) : \(product.body!)")
-                        print("\n\n")
-                    }
+                    self.dataArray =  try decoder.decode([Product].self, from: data)
                 }catch let error {
                     print(error)
                 }
@@ -51,18 +44,20 @@ class Page1ViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.dataArray.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let item = self.dataArray[indexPath.row]
+        
+        cell.textLabel = String(item.userID)
+        cell.detailTextLabel?.text = item.title
+        
+         return cell
     }
-    */
+   
 
     /*
     // Override to support conditional editing of the table view.
