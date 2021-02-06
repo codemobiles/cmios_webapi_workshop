@@ -21,7 +21,6 @@ app.post("/login", (req, res)=>{
 
 app.post('/uploads/', function (req, res) {
     console.log("Upload File");
-
     try {
         var form = new formidable.IncomingForm();
         form.parse(req, function (err, fields, files) {
