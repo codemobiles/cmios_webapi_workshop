@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class Page2ViewController: UITableViewController {
-
+    var dataArray:[Youtube] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,30 @@ class Page2ViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    
+    func loadData()  {
+        AF.request("https://codemobiles.com/adhoc/youtubes/index_new.php?username=admin&password=password&type=foods", method: .get).responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else {return}
+                do {
+                    let decoder = JSONDecoder()
+                    let youtubePlaylist =  try decoder.decode(YoutubePlaylist.self, from: data)
+                    if let _result = youtubePlaylist.youtubes {
+                        self.dataArray = _result
+                        self.tableView.reloadData()
+                    }
+                }catch let error {
+                    print(error)
+                }
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
     }
 
     // MARK: - Table view data source
