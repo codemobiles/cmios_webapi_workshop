@@ -26,7 +26,7 @@ app.post('/uploads/', function (req, res) {
         var form = new formidable.IncomingForm();
         form.parse(req, function (err, fields, files) {
             console.log(JSON.stringify(files));
-            res.json({result: "ok"})
+            res.json({result: "ok", fields, files})
         });
     } catch (err) {
         res.json({result: "nok"})

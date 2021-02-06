@@ -6,3 +6,27 @@ Content-Type: application/json
     "username": "admin",
     "password": "1234"
 }
+
+
+### Upload 
+POST http://localhost:8080/uploads HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="title";
+
+CodeMobiles Building 
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="lat";
+
+10.13
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="lng";
+
+100.22
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/png
+
+< ./test.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
