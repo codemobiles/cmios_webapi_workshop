@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class Page2ViewController: UITableViewController {
     var dataArray:[Youtube] = []
@@ -64,6 +65,7 @@ class Page2ViewController: UITableViewController {
         let item = self.dataArray[indexPath.row]
         cell.textLabel?.text = item.title
         cell.detailTextLabel?.text = item.subtitle
+        cell.imageView?.af_setImage(withURLRequest: item.avatarImage! as! URLRequestConvertible)
          return cell
     }
 
