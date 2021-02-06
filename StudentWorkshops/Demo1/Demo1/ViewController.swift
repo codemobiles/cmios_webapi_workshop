@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
 //        testLink5()
 //        testLink6()
 //        testLink7()
-        self.loginWithJSON(username: "lek_json", password: "555")
+        self.loginWithJSON(username: "lek", password: "555")
         self.loginWithUrlEncodedForm(username: "codemobiles_urlencoded", password: "666")
     }
     

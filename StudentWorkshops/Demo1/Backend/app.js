@@ -7,7 +7,13 @@ app.use(bodyParser.json())
 
 app.post("/login", (req, res)=>{
     console.log(JSON.stringify(req.body))
-    res.json({result: 'ok', echo: req.body})
+    const {username, password} = req.body
+    if (username == 'lek' && password == '555'){
+        res.json({result: 'ok', echo: req.body})
+    }else{
+        res.json({result: 'nok', echo: req.body})
+    }
+    
 })
 
 app.listen(8080, ()=>{
