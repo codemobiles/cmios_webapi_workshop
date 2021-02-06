@@ -18,9 +18,30 @@ class ViewController: UITableViewController {
 //        testLink3()
 //        testLink4()
 //        testLink5()
-        testLink6()
+//        testLink6()
+        testLink7()
     }
     
+    
+    func testLink7()  {
+        AF.request("https://codemobiles.com/adhoc/youtubes/index_new.php?username=admin&password=password&type=foods", method: .get).responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else {return}
+                do {
+                    let decoder = JSONDecoder()
+                    let youtubePlaylist =  try decoder.decode(YoutubePlaylist.self, from: data)
+                    print(youtubePlaylist)
+                }catch let error {
+                    print(error)
+                }
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
     
     func testLink6()  {
         AF.request("http://jsonplaceholder.typicode.com/posts", method: .get).responseJSON { (response) in
