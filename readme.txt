@@ -9,7 +9,7 @@ Course Outline
 4. Test Http Target with POSTMan, VSCode RESTful, Curl
 5. Intro Alamofire - https://github.com/Alamofire/Alamofire
 6. JSONPlaceHolder https://jsonplaceholder.typicode.com/
-
+7. QuickType - https://app.quicktype.io/
 
 Workshop
 1. HTTPS: AF.request("https://google.com").responseString { (response) in

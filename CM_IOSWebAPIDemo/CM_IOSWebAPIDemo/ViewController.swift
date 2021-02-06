@@ -118,6 +118,7 @@ class ViewController: UITableViewController {
     }
 }
 
+
 struct Product: Codable {
     let body, title: String?
     let id, userID: Int?

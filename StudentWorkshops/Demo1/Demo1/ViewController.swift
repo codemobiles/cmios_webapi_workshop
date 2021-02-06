@@ -19,6 +19,23 @@ class ViewController: UIViewController {
         testLink4()
     }
     
+    func testLink5(){
+        let data:[String:String] = ["title":"codemobiles", "body":"iOS", "userId": "6"]
+        AF.request("http://jsonplaceholder.typicode.com/posts", method: .post, parameters: data).responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else {return}
+                
+
+                print(result)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
+    
     func testLink4()  {
         let data:[String:String] = ["title":"codemobiles", "body":"iOS", "userId": "6"]
         AF.request("http://jsonplaceholder.typicode.com/posts", method: .post, parameters: data).responseString { (response) in
