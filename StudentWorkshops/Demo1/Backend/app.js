@@ -2,8 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 var formidable = require('formidable');
 var path = require('path');
-var fs = require("fs-");
-
+var fs = require("fs-extra");
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -20,31 +19,17 @@ app.post("/login", (req, res)=>{
 })
 
 
-
 app.post('/uploads/', function (req, res) {
     console.log("Upload File");
 
     try {
         var form = new formidable.IncomingForm();
         form.parse(req, function (err, fields, files) {
-
             console.log(JSON.stringify(files));
-            var oldpath = files.userfile.path;
-            var newpath = path.join(__dirname, "./upload/" + files.userfile.name);
-            
-            fs.rename(oldpath, newpath, function (err) {
-                if (err) throw err;
-
-              var username = fields.username;
-              var password =fields.password;
-              console.log("username: " + username);
-              console.log("password: " + password);
-              res.end("Upload Successfully");
-
-            });            
+            res.json({result: "ok"})
         });
     } catch (err) {
-        console.log("err : " + err);
+        res.json({result: "nok"})
     }
 });
 
