@@ -24,6 +24,7 @@
 		B0A792B725CE357E006C20D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A792BA25CE357E006C20D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0A792BC25CE357E006C20D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A792C325CE39D9006C20D4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		B0A792A225CE357B006C20D4 = {
 			isa = PBXGroup;
 			children = (
+				B0A792C325CE39D9006C20D4 /* Podfile */,
 				B0A792AD25CE357B006C20D4 /* Demo1 */,
 				B0A792AC25CE357B006C20D4 /* Products */,
 			);
