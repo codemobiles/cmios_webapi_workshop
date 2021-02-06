@@ -16,6 +16,7 @@
 		B0E6577825CE4E5100CEF3E7 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6577725CE4E5100CEF3E7 /* ProductModel.swift */; };
 		B0E6577C25CE56F800CEF3E7 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6577B25CE56F800CEF3E7 /* Page1ViewController.swift */; };
 		B0E6578025CE6BD800CEF3E7 /* YoutubePlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6577F25CE6BD800CEF3E7 /* YoutubePlaylist.swift */; };
+		B0E6578325CE6DE100CEF3E7 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6578225CE6DE100CEF3E7 /* Page2ViewController.swift */; };
 		E175E2C69B5D1F8E50BAE635 /* Pods_Demo1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA7E0DEDE17C031E40C913A /* Pods_Demo1.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		B0E6577725CE4E5100CEF3E7 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		B0E6577B25CE56F800CEF3E7 /* Page1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		B0E6577F25CE6BD800CEF3E7 /* YoutubePlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlaylist.swift; sourceTree = "<group>"; };
+		B0E6578225CE6DE100CEF3E7 /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		B3F44605CEA3A40392EDFBBE /* Pods-Demo1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo1.debug.xcconfig"; path = "Target Support Files/Pods-Demo1/Pods-Demo1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				B0A792B025CE357B006C20D4 /* SceneDelegate.swift */,
 				B0A792B225CE357B006C20D4 /* ViewController.swift */,
 				B0E6577B25CE56F800CEF3E7 /* Page1ViewController.swift */,
+				B0E6578225CE6DE100CEF3E7 /* Page2ViewController.swift */,
 				B0A792B425CE357B006C20D4 /* Main.storyboard */,
 				B0A792B725CE357E006C20D4 /* Assets.xcassets */,
 				B0A792B925CE357E006C20D4 /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 				B0A792B125CE357B006C20D4 /* SceneDelegate.swift in Sources */,
 				B0E6577825CE4E5100CEF3E7 /* ProductModel.swift in Sources */,
 				B0E6578025CE6BD800CEF3E7 /* YoutubePlaylist.swift in Sources */,
+				B0E6578325CE6DE100CEF3E7 /* Page2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
