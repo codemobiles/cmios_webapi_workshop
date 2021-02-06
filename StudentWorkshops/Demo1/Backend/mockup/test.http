@@ -15,3 +15,6 @@ Content-Type: application/json
     "title": "Lek",
     "body": "555"
 }
+
+### link 4
+GET https://codemobiles.com/adhoc/youtubes/index_new.php?username=admin&password=password&type=foods HTTP/1.1
