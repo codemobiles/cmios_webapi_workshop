@@ -23,6 +23,7 @@ class Page1ViewController: UITableViewController {
                 do {
                     let decoder = JSONDecoder()
                     self.dataArray =  try decoder.decode([Product].self, from: data)
+                    self.tableView.reloadData()
                 }catch let error {
                     print(error)
                 }
@@ -39,7 +40,7 @@ class Page1ViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,8 +52,7 @@ class Page1ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.dataArray[indexPath.row]
-        cell.textLabel?.text = String(item.userID!)
-        cell.detailTextLabel?.text = item.title        
+        cell.textLabel?.text = item.title
          return cell
     }
    
