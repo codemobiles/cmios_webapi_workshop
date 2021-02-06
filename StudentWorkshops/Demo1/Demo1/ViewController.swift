@@ -16,7 +16,8 @@ class ViewController: UIViewController {
 //        self.testLink2()
 //        self.notifyLine(message: "Hey", token:  "UCY2sei3F7H6HAgC8vRtLmvfIWS0ElL5Cd1d0ldbuxv")
 //        testLink3()
-        testLink4()
+//        testLink4()
+        testLink5()
     }
     
     func testLink5(){
@@ -25,9 +26,13 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(_):
                 guard let data = response.data else {return}
-                
-
-                print(result)
+                do {
+                    let decoder = JSONDecoder()
+                    let product =  try decoder.decode(Product.self, from: data)
+                    print(product.title!)
+                }catch let error{
+                    print(error)
+                }
                 break
             case .failure(let error):
                 print(error)
