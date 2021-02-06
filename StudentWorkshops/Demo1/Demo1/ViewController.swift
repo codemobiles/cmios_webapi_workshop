@@ -17,8 +17,38 @@ class ViewController: UIViewController {
 //        self.notifyLine(message: "Hey", token:  "UCY2sei3F7H6HAgC8vRtLmvfIWS0ElL5Cd1d0ldbuxv")
 //        testLink3()
 //        testLink4()
-        testLink5()
+//        testLink5()
+        testLink6()
     }
+    
+    
+    func testLink6()  {
+        AF.request("http://jsonplaceholder.typicode.com/posts", method: .get).responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                guard let data = response.data else {return}
+                do {
+                    let decoder = JSONDecoder()
+                    let products =  try decoder.decode([Product].self, from: data)
+                    for product in products {
+                        print("\(Product.CodingKeys.id.stringValue) : \(product.id!)")
+                        print("\(Product.CodingKeys.userID.stringValue) : \(product.userID!)")
+                        print("\(Product.CodingKeys.title.stringValue) : \(product.title!)")
+                        print("\(Product.CodingKeys.body.stringValue) : \(product.body!)")
+                        print("\n\n")
+                    }
+                    
+                }catch let error {
+                    print(error)
+                }
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
+
     
     func testLink5(){
         let data:[String:String] = ["title":"codemobiles", "body":"iOS", "userId": "6"]
