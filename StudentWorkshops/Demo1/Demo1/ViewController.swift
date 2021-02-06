@@ -16,6 +16,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /*
+     AF.request("https://google.com").responseString { (response) in
+         switch response.result{
+         case .success(let result):
+             print(result)
+             break
+         case .failure(let error):
+             print(error)
+             break
+         }
+     }
+     */
     
     func testLink1(){
         AF.request("https://google.com").responseString { (response) in
@@ -23,8 +35,8 @@ class ViewController: UIViewController {
             case .success(let result):
                 print(result)
                 break
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                print("Something wrong...")
                 break
             }
         }
