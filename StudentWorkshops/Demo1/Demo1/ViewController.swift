@@ -31,7 +31,12 @@ class ViewController: UITableViewController {
                 do {
                     let decoder = JSONDecoder()
                     let youtubePlaylist =  try decoder.decode(YoutubePlaylist.self, from: data)
-                    print(youtubePlaylist)
+                    guard let youtubes = youtubePlaylist.youtubes else {
+                        return
+                    }
+                    for item in youtubes {
+                        print(item.title!)
+                    }
                 }catch let error {
                     print(error)
                 }
