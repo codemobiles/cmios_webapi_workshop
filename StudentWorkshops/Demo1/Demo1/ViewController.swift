@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     // Lek - CodeMobiles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,6 @@ class ViewController: UIViewController {
                         print("\(Product.CodingKeys.body.stringValue) : \(product.body!)")
                         print("\n\n")
                     }
-                    
                 }catch let error {
                     print(error)
                 }
