@@ -41,5 +41,19 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func testLink2()  {
+          AF.request("http://jsonplaceholder.typicode.com/posts").responseString { (response) in
+              switch response.result {
+              case .success(let result):
+                  print(result)
+                  break
+              case .failure(let error):
+                  print(error)
+                  break
+              }
+          }
+      }
+      
 }
 
