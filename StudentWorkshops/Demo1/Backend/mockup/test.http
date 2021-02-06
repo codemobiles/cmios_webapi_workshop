@@ -8,6 +8,7 @@ GET http://jsonplaceholder.typicode.com/posts HTTP/1.1
 
 ### link 3
 POST http://jsonplaceholder.typicode.com/posts HTTP/1.1
+Content-Type: application/json
 
  {
     "userId": 87,
