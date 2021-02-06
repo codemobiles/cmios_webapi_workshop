@@ -51,10 +51,8 @@ class Page1ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = self.dataArray[indexPath.row]
-        
         cell.textLabel?.text = String(item.userID!)
-        cell.detailTextLabel?.text = item.title
-        
+        cell.detailTextLabel?.text = item.title        
          return cell
     }
    
