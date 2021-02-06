@@ -27,9 +27,13 @@ app.post("/uploads/", function (req, res) {
       // --------------------
       var oldpath = files.image.path;
       var newpath = path.join(__dirname, "./uploads/" + files.image.name);
+      if (fs.existsSync(newpath)){
+        await fs.remove(newpath)
+      }
+
       await fs.move(oldpath, newpath);
       res.json({ result: "ok", fields, files });
-      
+
     });
   } catch (err) {
     res.json({ result: "nok" });
