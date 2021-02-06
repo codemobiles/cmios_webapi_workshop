@@ -32,6 +32,8 @@ class ViewController: UITableViewController {
                 guard let data = response.data else {return}
                 do {
                     let decoder = JSONDecoder()
+                    let result = try decoder.decode(GeneralResult.self, from: data)
+                    print(result.result)
                 }catch let error{
                     print(error)
                 }
@@ -51,6 +53,8 @@ class ViewController: UITableViewController {
                 guard let data = response.data else {return}
                 do {
                     let decoder = JSONDecoder()
+                    let result = try decoder.decode(GeneralResult.self, from: data)
+                    print(result.result)
                 }catch let error{
                     print(error)
                 }
