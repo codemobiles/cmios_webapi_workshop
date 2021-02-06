@@ -4,3 +4,13 @@ GET https://google.com HTTP/1.1
 
 ### link 2
 GET http://jsonplaceholder.typicode.com/posts HTTP/1.1
+
+
+### link 3
+POST http://jsonplaceholder.typicode.com/posts HTTP/1.1
+
+ {
+    "userId": 87,
+    "title": "Lek",
+    "body": "555"
+}
