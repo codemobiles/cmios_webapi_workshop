@@ -7,7 +7,8 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
+import Kingfisher
+
 
 class Page2ViewController: UITableViewController {
     var dataArray:[Youtube] = []
@@ -65,7 +66,8 @@ class Page2ViewController: UITableViewController {
         let item = self.dataArray[indexPath.row]
         cell.textLabel?.text = item.title
         cell.detailTextLabel?.text = item.youtubeImage!
-        cell.imageView?.af_setImage(withURL: URL(string: item.youtubeImage!)!)
+        cell.imageView?.kf.setImage(with: URL(string: item.avatarImage!)!)
+
          return cell
     }
 
