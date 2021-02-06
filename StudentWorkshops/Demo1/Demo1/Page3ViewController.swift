@@ -21,7 +21,7 @@ class Page3ViewController: UIViewController {
     
     
     func uploadFile(url: String, data: Data, fileName: String) {
-        let parameter = ["username": "ABCD", "password": "12345678"]
+        let parameter = ["title": "CodeMobiles Building", "lat": "10.23", "lng": "100.33"]
         
         AF.upload(multipartFormData: { MultipartFormData in
             MultipartFormData.append(data, withName: "image", fileName: fileName, mimeType: "image/jpg")
