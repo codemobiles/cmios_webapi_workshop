@@ -17,10 +17,11 @@ class ViewController: UITableViewController {
 //        self.testLink3()
 //        self.testLink4()
 //        self.testLink5()
-        self.testLink6()
+//        self.testLink6()
         // Do any additional setup after loading the view.
     }
     
+  
     
     func testLink1()  {
         AF.request("https://google.com").responseString { (response) in
@@ -62,19 +63,7 @@ class ViewController: UITableViewController {
         }
     }
     
-    func testLink4()  {
-        let data:[String:String] = ["title":"codemobiles", "body":"iOS", "userId": "6"]
-        AF.request("http://jsonplaceholder.typicode.com/posts", method: .post, parameters: data).responseString { (response) in
-            switch response.result {
-            case .success(let result):
-                print(result)
-                break
-            case .failure(let error):
-                print(error)
-                break
-            }
-        }
-    }
+    
     
     
     func testLink5()  {

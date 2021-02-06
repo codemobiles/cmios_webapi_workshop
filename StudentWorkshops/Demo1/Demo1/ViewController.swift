@@ -15,9 +15,23 @@ class ViewController: UIViewController {
 //        self.testLink1()
 //        self.testLink2()
 //        self.notifyLine(message: "Hey", token:  "UCY2sei3F7H6HAgC8vRtLmvfIWS0ElL5Cd1d0ldbuxv")
-        testLink3()
+//        testLink3()
+        testLink4()
     }
     
+    func testLink4()  {
+        let data:[String:String] = ["title":"codemobiles", "body":"iOS", "userId": "6"]
+        AF.request("http://jsonplaceholder.typicode.com/posts", method: .post, parameters: data).responseString { (response) in
+            switch response.result {
+            case .success(let result):
+                print(result)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
+    }
     
     func testLink3()  {
         AF.request("http://jsonplaceholder.typicode.com/posts", method: .get).responseString { (response) in
@@ -31,7 +45,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
     
     func notifyLine(message:String, token: String){
         let data: [String: String] = ["message": message + " จาก POSPOS-iOS"]
