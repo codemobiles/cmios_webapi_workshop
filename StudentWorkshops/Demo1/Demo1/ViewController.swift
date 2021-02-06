@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                     let product =  try decoder.decode(Product.self, from: data)
                     
                     print("\(Product.CodingKeys.id.stringValue) : \(product.id!)")
-//                    print("\(Product.CodingKeys.userID.stringValue) : \(product.userID!)")
+                    print("\(Product.CodingKeys.userID.stringValue) : \(product.userID!)")
                     print("\(Product.CodingKeys.title.stringValue) : \(product.title!)")
                     print("\(Product.CodingKeys.body.stringValue) : \(product.body!)")
                 }catch let error{
