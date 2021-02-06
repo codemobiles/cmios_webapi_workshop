@@ -14,9 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        self.testLink1()
         self.testLink2()
-        // Do any additional setup after loading the view.
+        self.notifyLine(message: "Hey", token:  "xxxxxx")
     }
     
+    
+    func notifyLine(message:String, token: String){
+        let data: [String: String] = ["message": message + " จาก POSPOS-iOS"]
+        let headers: HTTPHeaders = ["Authorization":  "Bearer \(token)", "Accept": "application/json"]
+        
+        AF.request("https://notify-api.line.me/api/notify", method: .post, parameters: data, headers: headers).responseString { (response) in
+            switch response.result {
+            case .success(let result):
+                print(result.description)
+            case .failure(_): break
+            }
+        }
+    }
     
     func testLink2()  {
           AF.request("http://jsonplaceholder.typicode.com/posts").responseString { (response) in
